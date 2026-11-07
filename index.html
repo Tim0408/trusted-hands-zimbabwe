@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Trusted Hands Zimbabwe | Property & Family Assistance</title>
+<title>Trusted Hands Zimbabwe</title>
 
 <style>
 
@@ -12,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI,Arial,sans-serif;
 }
 
 html{
@@ -20,57 +19,118 @@ scroll-behavior:smooth;
 }
 
 body{
+background:#f8f9fa;
 color:#333;
 line-height:1.6;
-background:#fafafa;
 }
 
-/* NAVBAR */
+/* ===== NAVIGATION ===== */
 
 nav{
 background:#0B2545;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
+padding:15px 5%;
 position:sticky;
 top:0;
 z-index:1000;
+flex-wrap:wrap;
 }
 
 .logo{
-color:white;
-font-size:24px;
-font-weight:bold;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
-
-/* HERO */
-
-.hero{
+.shield-logo{
+width:55px;
+height:55px;
 background:linear-gradient(
-rgba(11,37,69,0.8),
-rgba(11,37,69,0.8)
-),
-url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600");
-background-size:cover;
-background-position:center;
-height:90vh;
+135deg,
+#009739,
+#FFD100,
+#E03C31
+);
+
 display:flex;
 align-items:center;
 justify-content:center;
+
+font-size:22px;
+font-weight:bold;
+color:white;
+
+border-radius:14px;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
+.logo-text{
+color:white;
+font-size:1.4rem;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+.nav-links a:hover{
+color:#FFD100;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+min-height:90vh;
+
+background:
+linear-gradient(
+rgba(11,37,69,0.75),
+rgba(11,37,69,0.75)
+),
+url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1800');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:20px;
+
+padding:40px;
 color:white;
 }
 
 .hero-content{
-max-width:800px;
+max-width:900px;
+}
+
+.hero-badge{
+
+display:inline-block;
+padding:10px 20px;
+
+background:rgba(255,255,255,0.15);
+
+border-radius:30px;
+
+margin-bottom:25px;
+
+font-weight:bold;
+
+backdrop-filter:blur(5px);
+
 }
 
 .hero h1{
@@ -79,41 +139,63 @@ margin-bottom:20px;
 }
 
 .hero p{
-font-size:1.2rem;
-margin-bottom:30px;
+font-size:1.15rem;
+margin-bottom:25px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:14px 30px;
-background:#F9A826;
-color:white;
+
+padding:14px 28px;
+
+border-radius:6px;
+
 text-decoration:none;
-border-radius:5px;
+
 font-weight:bold;
-margin:5px;
+
 }
 
-.btn:hover{
-background:#d88900;
+.btn-primary{
+background:#FFD100;
+color:black;
 }
 
-/* SECTION */
+.btn-secondary{
+background:#009739;
+color:white;
+}
+
+.trust-bar{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+/* ===== SECTIONS ===== */
 
 section{
-padding:80px 10%;
+padding:80px 8%;
 }
 
 .section-title{
 text-align:center;
-font-size:2rem;
+font-size:2.2rem;
 margin-bottom:50px;
 color:#0B2545;
 }
 
-/* SERVICES */
+/* ===== CARDS ===== */
 
-.cards{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
@@ -122,125 +204,141 @@ gap:25px;
 .card{
 background:white;
 padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 .card h3{
 margin-bottom:15px;
+color:#009739;
+}
+
+/* ===== PROCESS ===== */
+
+.process{
+background:#eef3f8;
+}
+
+/* ===== HELP SECTION ===== */
+
+.help-card{
+background:white;
+padding:35px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.help-card h3{
 color:#0B2545;
+margin-bottom:15px;
 }
 
-/* WHY US */
+/* ===== TESTIMONIAL ===== */
 
-.why{
-background:#eef4fa;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+.testimonial{
+background:#0B2545;
+color:white;
+padding:35px;
+border-radius:15px;
+max-width:900px;
+margin:auto;
 text-align:center;
 }
 
-.feature{
-background:white;
-padding:25px;
-border-radius:10px;
-}
-
-/* PRICING */
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.price-card{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-.price{
-font-size:36px;
-font-weight:bold;
-color:#F9A826;
-margin:20px 0;
-}
-
-/* CONTACT */
+/* ===== CONTACT ===== */
 
 .contact{
-background:#0B2545;
+background:#111;
 color:white;
 text-align:center;
 }
 
 .contact p{
-margin:10px 0;
+margin:12px 0;
 }
 
-/* WHATSAPP BUTTON */
+/* ===== FOOTER ===== */
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* ===== WHATSAPP ===== */
 
 .whatsapp{
 position:fixed;
-bottom:20px;
 right:20px;
+bottom:20px;
+
 background:#25D366;
 color:white;
-padding:15px 20px;
+
+padding:15px 25px;
+
 border-radius:50px;
+
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
-footer{
-background:#07182d;
-color:white;
-text-align:center;
-padding:20px;
-}
+/* ===== MOBILE ===== */
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:2rem;
-}
 
 nav{
 flex-direction:column;
 }
 
-nav a{
-margin:10px;
+.nav-links{
+margin-top:15px;
+flex-direction:column;
+text-align:center;
+gap:10px;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.logo-text{
+font-size:1.1rem;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
 <nav>
 
 <div class="logo">
+
+<div class="shield-logo">
+TH
+</div>
+
+<div class="logo-text">
 Trusted Hands Zimbabwe
 </div>
 
-<div>
+</div>
+
+<div class="nav-links">
 <a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
+<a href="#how">How It Works</a>
+<a href="#help">How We Help</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -250,18 +348,38 @@ Trusted Hands Zimbabwe
 
 <div class="hero-content">
 
-<h1>Your Trusted Hands on the Ground in Zimbabwe</h1>
+<div class="hero-badge">
+🇿🇼 Trusted Support For Zimbabweans Worldwide
+</div>
+
+<h1>
+Property Supervision, Elderly Support & Trusted Local Assistance
+</h1>
 
 <p>
-Helping Zimbabweans abroad manage properties,
-support elderly relatives and handle important errands with confidence.
+Helping Zimbabweans abroad protect property, support loved ones and manage important errands with complete peace of mind.
 </p>
 
-<a href="#contact" class="btn">Request Assistance</a>
+<div class="buttons">
 
-<a href="https://wa.me/263771234567" class="btn">
+<a href="#contact" class="btn btn-primary">
+Request Assistance
+</a>
+
+<a href="https://wa.me/263783636341" class="btn btn-secondary">
 WhatsApp Us
 </a>
+
+</div>
+
+<div class="trust-bar">
+
+<div>✅ Property Monitoring</div>
+<div>✅ Family Support</div>
+<div>✅ Photo Reports</div>
+<div>✅ WhatsApp Updates</div>
+
+</div>
 
 </div>
 
@@ -269,35 +387,37 @@ WhatsApp Us
 
 <section id="services">
 
-<h2 class="section-title">Our Services</h2>
+<h2 class="section-title">
+Our Services
+</h2>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
-<h3>🏡 Property Supervision</h3>
+<h3>🏠 Property Supervision</h3>
 <p>
-Construction monitoring, site visits, progress reports, tenant checks and property inspections.
+Construction monitoring, property checks, inspections and progress reporting.
 </p>
 </div>
 
 <div class="card">
-<h3>👵 Elderly Support</h3>
+<h3>👵 Elderly Assistance</h3>
 <p>
-Wellness visits, medication collection, grocery shopping and family updates.
+Welfare visits, grocery shopping, medicine collection and family support.
 </p>
 </div>
 
 <div class="card">
 <h3>🛒 Shopping & Deliveries</h3>
 <p>
-Purchase and deliver groceries, furniture, appliances and essential supplies.
+Purchasing and delivering groceries, furniture, appliances and essentials.
 </p>
 </div>
 
 <div class="card">
-<h3>📋 Personal Errands</h3>
+<h3>📄 Personal Errands</h3>
 <p>
-Bill payments, document collection, school fees, inspections and more.
+Bill payments, document collection and local support services.
 </p>
 </div>
 
@@ -305,77 +425,99 @@ Bill payments, document collection, school fees, inspections and more.
 
 </section>
 
-<section class="why">
+<section id="how" class="process">
 
-<h2 class="section-title">Why Families Trust Us</h2>
+<h2 class="section-title">
+How It Works
+</h2>
 
-<div class="features">
+<div class="grid">
 
-<div class="feature">
-<h3>✅ Reliable</h3>
-<p>Dependable support when you cannot be there yourself.</p>
+<div class="card">
+<h3>1. Contact Us</h3>
+<p>
+Tell us what assistance you require.
+</p>
 </div>
 
-<div class="feature">
-<h3>📸 Photo Updates</h3>
-<p>Receive photos and videos after every visit.</p>
+<div class="card">
+<h3>2. We Take Action</h3>
+<p>
+We complete the task professionally and efficiently.
+</p>
 </div>
 
-<div class="feature">
-<h3>📞 Fast Communication</h3>
-<p>Stay informed with regular updates and reports.</p>
+<div class="card">
+<h3>3. Receive Updates</h3>
+<p>
+Photos, videos and detailed reports are provided.
+</p>
 </div>
 
-<div class="feature">
-<h3>🤝 Transparent Service</h3>
-<p>No hidden costs. Clear pricing and professional support.</p>
+<div class="card">
+<h3>4. Peace Of Mind</h3>
+<p>
+Stay informed wherever you are in the world.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="pricing">
+<section id="help">
 
-<h2 class="section-title">Packages</h2>
+<h2 class="section-title">
+How We Can Help
+</h2>
 
-<div class="pricing">
+<div class="grid">
 
-<div class="price-card">
+<div class="help-card">
 
-<h3>Basic</h3>
+<h3>🏠 Property Supervision</h3>
 
-<div class="price">$40</div>
-
-<p>2 Visits Per Month</p>
-<p>Photo Updates</p>
-<p>Monthly Report</p>
-
-</div>
-
-<div class="price-card">
-
-<h3>Standard</h3>
-
-<div class="price">$75</div>
-
-<p>Weekly Visits</p>
-<p>Priority Communication</p>
-<p>Detailed Updates</p>
+<p>Construction Monitoring</p>
+<p>Property Inspections</p>
+<p>Progress Reports</p>
 
 </div>
 
-<div class="price-card">
+<div class="help-card">
 
-<h3>Premium</h3>
+<h3>👵 Family Support</h3>
 
-<div class="price">$150</div>
-
-<p>Weekly Inspections</p>
-<p>Emergency Assistance</p>
-<p>Unlimited Consultations</p>
+<p>Wellness Visits</p>
+<p>Medication Collection</p>
+<p>Shopping Assistance</p>
 
 </div>
+
+<div class="help-card">
+
+<h3>📋 Personal Assistance</h3>
+
+<p>Bill Payments</p>
+<p>Document Collection</p>
+<p>General Errands</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Why Clients Trust Us
+</h2>
+
+<div class="testimonial">
+
+<p>
+Trusted Hands Zimbabwe helps Zimbabweans abroad stay connected to their investments, properties and loved ones through reliable local support, regular updates and professional service.
+</p>
 
 </div>
 
@@ -383,35 +525,35 @@ Bill payments, document collection, school fees, inspections and more.
 
 <section id="contact" class="contact">
 
-<h2>Contact Trusted Hands Zimbabwe</h2>
+<h2 class="section-title" style="color:white;">
+Contact Us
+</h2>
 
 <p>📍 Bulawayo, Zimbabwe</p>
 
-<p>📧 info@trustedhandszim.com</p>
+<p>📱 WhatsApp: +263 78 363 6341</p>
 
-<p>📱 +263 78 363 6341</p>
+<p>📧 Email Address Coming Soon</p>
 
 <br>
 
-<a href="https://wa.me/263783636341" class="btn">
-Chat on WhatsApp
+<a href="https://wa.me/263783636341" class="btn btn-primary">
+Chat On WhatsApp
 </a>
 
 </section>
 
 <footer>
 
-<p>
-© 2026 Trusted Hands Zimbabwe.
-Your trusted eyes and hands on the ground.
-</p>
+<p>© 2026 Trusted Hands Zimbabwe</p>
+
+<p>Your Trusted Hands On The Ground In Zimbabwe</p>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/263771234567">
-
+<a class="whatsapp"
+href="https://wa.me/263783636341">
 WhatsApp
-
 </a>
 
 </body>
